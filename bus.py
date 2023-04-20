@@ -5,9 +5,9 @@
 
 class Bus:
     def __init__(self, brand='no name', price=0, number=0):
-        self.brand = brand        # public
-        self.price = price        # public
-        self.number = number      # public
+        self._brand = brand        # protected
+        self._price = price        # protected
+        self._number = number      # protected
 
 
     # def __del__(self):
@@ -15,10 +15,11 @@ class Bus:
 
 
     def __str__(self):
-        return f"Bus: {self.brand}, price = ${self.price}, number = {self.number}"
+        return f"Bus: {self._brand}, price = ${self._price}, number = {self._number}"
 
 
 if __name__ == "__main__":
     bus = Bus()
-    bus.number = -10    # public
+    bus.number = -10    # protected
+    print(bus)
 
