@@ -1,16 +1,20 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from bus import Bus
+from manager import Manager
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    bus1 = Bus("Scania", 23000, 42)
+    bus2 = Bus("MAZ", 12000, 34)
+    bus3 = Bus("Volvo", 31000, 48)
+    bus4 = Bus("PAZ", 11000, 15)
+    bus5 = Bus("Mercedes Benz", 123000, 67)
+
+    buses = (bus1, bus2, bus3, bus4, bus5)
+
+    result = Manager.find_bus(buses)
+
+    print(result)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
