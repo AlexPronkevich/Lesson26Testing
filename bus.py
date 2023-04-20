@@ -1,8 +1,13 @@
+# private
+# public
+# protected
+
+
 class Bus:
     def __init__(self, brand='no name', price=0, number=0):
-        self.brand = brand
-        self.price = price
-        self.number = number
+        self.brand = brand        # public
+        self.price = price        # public
+        self.number = number      # public
 
 
     # def __del__(self):
@@ -14,12 +19,6 @@ class Bus:
 
 
 if __name__ == "__main__":
-    bus1 = Bus("Scania")
-    bus2 = Bus("MAZ")
-    bus3 = Bus("Volvo")
-    bus4 = Bus("PAZ")
-    bus2 = Bus("Mercedes Benz")
+    bus = Bus()
+    bus.number = -10    # public
 
-    # print((bus1))
-
-    # s = f"Bus: {bus1.brand}, price = ${bus1.price}, number = {bus1.number}"
