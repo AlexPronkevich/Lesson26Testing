@@ -9,13 +9,25 @@ class Bus:
         self.__price = price        # private
         self.__number = number      # private
 
+    def get_brand(self):
+        return self.__brand
+
+    def set_brand(self, name):
+        self.__brand = name
+
 
     def get_price(self):
         return self.__price
 
     def set_price(self, price):
         if price > 0:
-            self.price = price
+            self.__price = price
+
+    def get_number(self):
+        return self.__number
+
+    def set_number(self, number):
+        self.__number = number
 
 
     # def __del__(self):
@@ -28,5 +40,7 @@ class Bus:
 
 if __name__ == "__main__":
     bus = Bus()
-    print(bus.__numder)
+    bus.set_price(12000)
+    print(bus.get_price())
+
 
